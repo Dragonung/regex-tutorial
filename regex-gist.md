@@ -49,6 +49,15 @@ $: string ends with characters that precede it (can be exact or range)
  \w: " alphanumeric with basic Latin alphabet, including underscore (_); equivalent to [A-Za-z0-9_]
  \s: " single whitespace character, including tabs & line breaks
 
+### Flags
+
+ i: search is case-insensitive
+ g: searches all matches
+ m: multiline mode; affects behavior of '^' and '$' 
+ s: "dotall" mode; allows dot '.' to match newline character '\n'
+ u: enables full Unicode support, allowing greater coverage for many different characters
+ y: "Sticky" mode; allowing search at a given position in the source string
+
 ### Grouping and Capturing
 
  grouping(()): if two or more subexpressions, all must exactly match; similar to AND operator in Javascript
