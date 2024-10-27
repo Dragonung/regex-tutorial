@@ -6,6 +6,8 @@ All of these processes use Regex to scan and analyze strings in order to make st
 
 ## Summary
 
+Under the TOC lists various terms that contain different methods on how to perform various regular expressions. <br/>
+
 The code will act as an example of how regex is broken down in order for users to better understand how it analyzes certain strings.
 
 ## Table of Contents
@@ -26,17 +28,17 @@ The code will act as an example of how regex is broken down in order for users t
 
 ### Anchors
 
-^: matches exact string and is case-sensitive
-$: string ends with characters that precede it (can be exact or range)
+ -^: matches exact string and is case-sensitive <br/>
+ -$: string ends with characters that precede it (can be exact or range)
 
 ### Quantifiers
 
- *: matches pattern 0-5 times
- +: "       "       >=1 "
- ?: "       "       0 or 1 "
- {}: { n }: matches exactly n times
-    { n, }: "      at least n "
-    { n, x}: " n to x "
+ -*: matches pattern 0-5 times <br/>
+ -+: matches pattern >=1 time <br/>
+ -?: matches pattern 0 or 1 time <br/>
+ -{}: { n }: matches exactly n times <br/>
+     { n, }: "      at least n " <br/>
+     { n, x}: " n to x "
 
 ### OR Operator
 
@@ -44,55 +46,55 @@ $: string ends with characters that precede it (can be exact or range)
 
 ### Character Classes
 
- .: matches any char except newline char (\newline)
- \d: " Arabic numeral digit; equivalent to [0-9]
- \w: " alphanumeric with basic Latin alphabet, including underscore (_); equivalent to [A-Za-z0-9_]
- \s: " single whitespace character, including tabs & line breaks
+ -.: matches any char except newline char (\newline) <br/>
+ -\d: " Arabic numeral digit; equivalent to [0-9] <br/>
+ -\w: " alphanumeric with basic Latin alphabet, including underscore (_); equivalent to [A-Za-z0-9_] <br/>
+ -\s: " single whitespace character, including tabs & line breaks
 
 ### Flags
 
- i: search is case-insensitive
- g: searches all matches
- m: multiline mode; affects behavior of '^' and '$' 
- s: "dotall" mode; allows dot '.' to match newline character '\n'
- u: enables full Unicode support, allowing greater coverage for many different characters
- y: "Sticky" mode; allowing search at a given position in the source string
+ -i: search is case-insensitive <br/>
+ -g: searches all matches <br/>
+ -m: multiline mode; affects behavior of '^' and '$' <br/>
+ -s: "dotall" mode; allows dot '.' to match newline character '\n' <br/>
+ -u: enables full Unicode support, allowing greater coverage for many different characters <br/>
+ -y: "Sticky" mode; allowing search at a given position in the source string
 
 ### Grouping and Capturing
 
- grouping(()): if two or more subexpressions, all must exactly match; similar to AND operator in Javascript
- capturing: useful for capturing very specific data (dates, phone numbers, emails, etc.)
+ -grouping(()): if two or more subexpressions, all must exactly match; similar to AND operator in Javascript <br/>
+ -capturing: useful for capturing very specific data (dates, phone numbers, emails, etc.)
 
 ### Bracket Expressions
 
- []: range of characters to match
-    -[a-z]: lowercase letter between a-z; uppercase letters must be searched with [a-zA-Z]
-    -[0-9]: any number between 0-9
-    -[_-]: contains underscore or hyphen
+ -[]: range of characters to match <br/>
+    -[a-z]: lowercase letter between a-z; uppercase letters must be searched with [a-zA-Z] <br/>
+    -[0-9]: any number between 0-9 <br/>
+    -[_-]: contains underscore or hyphen 
 
 ### Greedy and Lazy Match
  
- greedy: will match more characters than expected
- lazy:   will match fewer characters than expected
+ -greedy: will match more characters than expected <br/>
+ -lazy:   will match fewer characters than expected
 
 ### Boundaries
 
- \b: word boundary; matches positions of a word char depending on boundary placement
- \B: Not-a-word-boundary; " "         " individual chars in a string, in that order
- Left- and Right-of-Word boundaries
-    [[:<:]]: beginning-of-word; will find strings starting with word; cannot be placed at end
-    [[:>:]]: end-of-word; will find strings ending with word; cannot be placed at beginning
+ \b: word boundary; matches positions of a word char depending on boundary placement <br/>
+ \B: Not-a-word-boundary; matches positions of individual chars in a string, in that order <br/>
+ Left- and Right-of-Word boundaries <br/>
+    -[[:<:]]: beginning-of-word; will find strings starting with word; cannot be placed at end <br/>
+    -[[:>:]]: end-of-word; will find strings ending with word; cannot be placed at beginning
 
 ### Back-references
  
- a way to match same text as previously matched by a capturing grouping
+ a way to match same text as previously matched by a capturing grouping <br/>
     Ex: finding duplicate words, palindromes, and replacing text 
 
 ### Look-ahead and Look-behind
 
- (?=chars): find pattern ahead of current position of string without comsuming chars in string
- (?!chars): find pattern if NOT followed by chars in string
- (?<=chars): find pattern behind position of chars in string
+ (?=chars): find pattern ahead of current position of string without comsuming chars in string <br/>
+ (?!chars): find pattern if NOT followed by chars in string <br/>
+ (?<=chars): find pattern behind position of chars in string <br/>
  (?<!chars): do not match a string if chars before it
 
 ## Author
