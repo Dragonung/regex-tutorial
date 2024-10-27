@@ -79,23 +79,23 @@ The code will act as an example of how regex is broken down in order for users t
 
 ### Boundaries
 
- \b: word boundary; matches positions of a word char depending on boundary placement <br/>
- \B: Not-a-word-boundary; matches positions of individual chars in a string, in that order <br/>
- Left- and Right-of-Word boundaries <br/>
+ -\b: word boundary; matches positions of a word char depending on boundary placement <br/>
+ -\B: Not-a-word-boundary; matches positions of individual chars in a string, in that order <br/>
+ -Left- and Right-of-Word boundaries <br/>
     -[[:<:]]: beginning-of-word; will find strings starting with word; cannot be placed at end <br/>
     -[[:>:]]: end-of-word; will find strings ending with word; cannot be placed at beginning
 
 ### Back-references
  
- a way to match same text as previously matched by a capturing grouping <br/>
-    Ex: finding duplicate words, palindromes, and replacing text 
+ -a way to match same text as previously matched by a capturing grouping <br/>
+    -Ex: finding duplicate words, palindromes, and replacing text 
 
 ### Look-ahead and Look-behind
 
- (?=chars): find pattern ahead of current position of string without comsuming chars in string <br/>
- (?!chars): find pattern if NOT followed by chars in string <br/>
- (?<=chars): find pattern behind position of chars in string <br/>
- (?<!chars): do not match a string if chars before it
+ -(?=chars): find pattern ahead of current position of string without comsuming chars in string <br/>
+ -(?!chars): find pattern if NOT followed by chars in string <br/>
+ -(?<=chars): find pattern behind position of chars in string <br/>
+ -(?<!chars): do not match a string if chars before it
 
 ## Author
 
