@@ -37,8 +37,8 @@ The code will act as an example of how regex is broken down in order for users t
  -+: matches pattern >=1 time <br/>
  -?: matches pattern 0 or 1 time <br/>
  -{}: { n }: matches exactly n times <br/>
-     { n, }: "      at least n " <br/>
-     { n, x}: " n to x "
+     -{ n, }: "      at least n " <br/>
+     -{ n, x}: " n to x "
 
 ### OR Operator
 
@@ -88,7 +88,7 @@ The code will act as an example of how regex is broken down in order for users t
 ### Back-references
  
  -a way to match same text as previously matched by a capturing grouping <br/>
-    -Ex: finding duplicate words, palindromes, and replacing text 
+    Ex: finding duplicate words, palindromes, and replacing text 
 
 ### Look-ahead and Look-behind
 
