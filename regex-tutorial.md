@@ -28,49 +28,49 @@ The code will act as an example of how regex is broken down in order for users t
 
 ### Anchors
 
- -^: matches exact string and is case-sensitive <br/>
- -$: string ends with characters that precede it (can be exact or range)
+ -**^**: matches exact string and is case-sensitive <br/>
+ -**$**: string ends with characters that precede it (can be exact or range)
 
 ### Quantifiers
 
- -*: matches pattern 0-5 times <br/>
- -+: matches pattern >=1 time <br/>
- -?: matches pattern 0 or 1 time <br/>
- -{}: { n }: matches exactly n times <br/>
-     -{ n, }: "      at least n " <br/>
-     -{ n, x}: " n to x "
+ -__*__: matches pattern 0-5 times <br/>
+ -**+**: matches pattern >=1 time <br/>
+ -**?**: matches pattern 0 or 1 time <br/>
+ -**{}**: { n }: matches exactly n times <br/>
+  -__{ n, }__: "      at least n " <br/>
+  -__{ n, x}__: " n to x "
 
 ### OR Operator
 
- |: if one expression in several grouping constructs is true, entire expression is true
+ **|**: if one expression in several grouping constructs is true, entire expression is true
 
 ### Character Classes
 
- -.: matches any char except newline char (\newline) <br/>
- -\d: " Arabic numeral digit; equivalent to [0-9] <br/>
- -\w: " alphanumeric with basic Latin alphabet, including underscore (_); equivalent to [A-Za-z0-9_] <br/>
- -\s: " single whitespace character, including tabs & line breaks
+ -**.**: matches any char except newline char (\newline) <br/>
+ -**\d**: " Arabic numeral digit; equivalent to [0-9] <br/>
+ -**\w**: " alphanumeric with basic Latin alphabet, including underscore (_); equivalent to [A-Za-z0-9] <br/>
+ -**\s**: " single whitespace character, including tabs & line breaks
 
 ### Flags
 
- -i: search is case-insensitive <br/>
- -g: searches all matches <br/>
- -m: multiline mode; affects behavior of '^' and '$' <br/>
- -s: "dotall" mode; allows dot '.' to match newline character '\n' <br/>
- -u: enables full Unicode support, allowing greater coverage for many different characters <br/>
- -y: "Sticky" mode; allowing search at a given position in the source string
+ -**i**: search is case-insensitive <br/>
+ -**g**: searches all matches <br/>
+ -**m**: multiline mode; affects behavior of '^' and '$' <br/>
+ -**s**: "dotall" mode; allows dot '.' to match newline character '\n' <br/>
+ -**u**: enables full Unicode support, allowing greater coverage for many different characters <br/>
+ -**y**: "Sticky" mode; allowing search at a given position in the source string
 
 ### Grouping and Capturing
 
- -grouping(()): if two or more subexpressions, all must exactly match; similar to AND operator in Javascript <br/>
+ -grouping (**()**): treating multiple characters in parantheses as a single unit <br/>
  -capturing: useful for capturing very specific data (dates, phone numbers, emails, etc.)
 
 ### Bracket Expressions
 
- -[]: range of characters to match <br/>
-    -[a-z]: lowercase letter between a-z; uppercase letters must be searched with [a-zA-Z] <br/>
-    -[0-9]: any number between 0-9 <br/>
-    -[_-]: contains underscore or hyphen 
+ -**[]**: range of characters to match <br/>
+  -__[a-z]__: lowercase letter between a-z; uppercase letters must be searched with [a-zA-Z] <br/>
+  -__[0-9]__: any number between 0-9 <br/>
+  -__[_-]__: contains underscore or hyphen 
 
 ### Greedy and Lazy Match
  
@@ -79,23 +79,23 @@ The code will act as an example of how regex is broken down in order for users t
 
 ### Boundaries
 
- -\b: word boundary; matches positions of a word char depending on boundary placement <br/>
- -\B: Not-a-word-boundary; matches positions of individual chars in a string, in that order <br/>
+ -**\b**: word boundary; matches positions of a word char depending on boundary placement <br/>
+ -**\B**: Not-a-word-boundary; matches positions of individual chars in a string, in that order <br/>
  -Left- and Right-of-Word boundaries <br/>
-    -[[:<:]]: beginning-of-word; will find strings starting with word; cannot be placed at end <br/>
-    -[[:>:]]: end-of-word; will find strings ending with word; cannot be placed at beginning
+  -**[[:<:]]**: beginning-of-word; will find strings starting with word; cannot be placed at end <br/>
+  -**[[:>:]]**: end-of-word; will find strings ending with word; cannot be placed at beginning
 
 ### Back-references
  
  -a way to match same text as previously matched by a capturing grouping <br/>
-    Ex: finding duplicate words, palindromes, and replacing text 
+  -Ex: finding duplicate words, palindromes, and replacing text 
 
 ### Look-ahead and Look-behind
 
- -(?=chars): find pattern ahead of current position of string without comsuming chars in string <br/>
- -(?!chars): find pattern if NOT followed by chars in string <br/>
- -(?<=chars): find pattern behind position of chars in string <br/>
- -(?<!chars): do not match a string if chars before it
+ -**(?=__chars__)**: find pattern ahead of current position of string without comsuming chars in string <br/>
+ -**(?!__chars__)**: find pattern if NOT followed by chars in string <br/>
+ -**(?<=__chars__)**: find pattern behind position of chars in string <br/>
+ -**(?<!__chars__)**: do not match a string if chars before it
 
 ## Author
 
